@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todolist_app/AppTheme.dart';
-import 'package:todolist_app/Tabs/Setting%20Tab/Setting.dart';
+import 'package:todolist_app/Tabs/Setting-Tab/Setting.dart';
 import 'package:todolist_app/Tabs/TaskTab/tasktab.dart';
 
 class HomeScreen extends StatefulWidget {
