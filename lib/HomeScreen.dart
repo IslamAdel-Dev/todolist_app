@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todolist_app/AppTheme.dart';
 import 'package:todolist_app/Tabs/Setting-Tab/Setting.dart';
+import 'package:todolist_app/Tabs/TaskTab/AddnewTask.dart';
 import 'package:todolist_app/Tabs/TaskTab/tasktab.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,7 +25,12 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: FloatingActionButton(
         clipBehavior: Clip.antiAlias,
         child: Icon(Icons.add, color: AppTheme.white),
-        onPressed: () {},
+        onPressed: () {
+          showModalBottomSheet(
+              context: context,
+              builder: (_)=>addnewTask(),
+          );
+        },
       ),
       body: tabs[index],
       bottomNavigationBar: ClipRRect(
@@ -35,9 +41,10 @@ class _HomeScreenState extends State<HomeScreen> {
           height: 70,
           child: BottomNavigationBar(
             currentIndex: index,
-            onTap: (Index) => setState(() {
-              index = Index;
-            }),
+            onTap: (Index) =>
+                setState(() {
+                  index = Index;
+                }),
             items: [
               BottomNavigationBarItem(
                 icon: Icon(
