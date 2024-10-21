@@ -40,4 +40,35 @@ class AppTheme {
           TextStyle(fontSize: 22, color: black, fontWeight: FontWeight.bold),
     ),
   );
+  static ThemeData darkmode = ThemeData(
+    scaffoldBackgroundColor: darkprimary,
+    bottomAppBarTheme: BottomAppBarTheme(
+      shape: CircularNotchedRectangle(),
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: white,
+      unselectedItemColor: grey,
+      selectedItemColor: blue,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+    ),
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      elevation: 0,
+      backgroundColor: blue,
+      foregroundColor: white,
+      shape: RoundedRectangleBorder(
+        side: BorderSide(width: 4, color: white),
+        borderRadius: BorderRadius.all(Radius.circular(30)),
+      ),
+      iconSize: 27,
+    ),
+    textTheme: TextTheme(
+      titleMedium:
+      TextStyle(fontSize: 15, color: black, fontWeight: FontWeight.bold),
+      titleLarge:
+      TextStyle(fontSize: 18, color: black, fontWeight: FontWeight.bold),
+      headlineSmall:
+      TextStyle(fontSize: 22, color: black, fontWeight: FontWeight.bold),
+    ),
+  );
 }

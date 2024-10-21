@@ -24,7 +24,7 @@ class TodoList extends StatelessWidget {
         HomeScreen.routeName: (_) => HomeScreen(),
       },
       themeMode: settingProvider.themeMode,
-      darkTheme: AppTheme.lightMode,
+      darkTheme: AppTheme.darkmode,
       theme: AppTheme.lightMode,
     );
   }
